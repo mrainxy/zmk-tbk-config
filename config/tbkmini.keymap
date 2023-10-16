@@ -37,8 +37,8 @@
         compatible = "zmk,conditional-layers";
 
         tri_layer {
-            if-layers = <LOWER RAISE>;
-            then-layer = <ADJUST>;
+            if-layers = <1 2>;
+            then-layer = <3>;
         };
     };
 
@@ -63,17 +63,13 @@
             label = "NON_BLOCKING";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_tap>,
-                <&kp LS(COMMA) &kp EQUAL>;
+            bindings = <&macro_tap>, <&kp LS(COMMA) &kp EQUAL>;
         };
         cmd_mode: cmd_mode {
             label = "VIM_CMD_MODE";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_tap>,
-                <&kp ESC &kp LS(SEMI)>;
+            bindings = <&macro_tap>, <&kp ESC &kp LS(SEMI)>;
         };
     };
 
@@ -131,21 +127,6 @@
 &bl BL_ON   &rgb_ug RGB_HUI  &rgb_ug RGB_SAI                 &rgb_ug RGB_BRI                   &rgb_ug RGB_SPI                   &rgb_ug RGB_EFF                   &trans        &trans        &trans        &trans        &trans        &trans
 &bl BL_OFF  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD                 &rgb_ug RGB_BRD                   &rgb_ug RGB_SPD                   &rgb_ug RGB_EFR                   &trans        &trans        &trans        &trans        &trans        &trans
                                                              &trans                            &trans                            &trans                            &trans        &trans        &trans
-            >;
-        };
-
-        number_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
-            bindings = <
-&kp TAB    &trans        &kp N1  &kp N2    &kp N3  &trans        &trans     &trans     &trans     &trans   &trans        &kp BSPC
-&kp LCTRL  &trans        &kp N4  &kp N5    &kp N6  &kp LS(SEMI)  &kp MINUS  &kp EQUAL  &trans     &trans   &kp LS(SEMI)  &kp SQT
-&kp LSHFT  &tog NUMBERS  &kp N7  &kp N8    &kp N9  &kp N0        &trans     &kp PLUS   &kp COMMA  &kp DOT  &kp FSLH      &trans
-                                 &kp LGUI  &trans  &kp SPACE     &kp RET    &trans     &kp LGUI
             >;
         };
     };
