@@ -101,7 +101,7 @@
             bindings = <
 &kp ESC    &none   &kp PLUS  &kp MINUS   &kp F11    &kp F12     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &kp PERCENT   &kp BACKSPACE
 &kp CAPS   &kp F1  &kp F2    &kp F3      &kp F4     &kp F5      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp EQUAL     &kp ASTERISK  &kp SLASH
-&kp LCTRL  &kp F6  &kp F7    &kp F8      &kp F9     &kp F10     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none         &kp PERIOD    &kp RIGHT_ALT
+&kp LCTRL  &kp F6  &kp F7    &kp F8      &kp F9     &kp F10     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp DOT       &kp SLASH     &kp RIGHT_ALT
                              &kp LSHIFT  &kp ENTER  &kp DELETE  &to 0         &kp SPACE     &kp TAB
             >;
         };
@@ -126,7 +126,7 @@
 &trans      &bt BT_CLR       &rgb_ug RGB_COLOR_HSB(0,91,50)  &rgb_ug RGB_COLOR_HSB(239,95,51)  &rgb_ug RGB_COLOR_HSB(129,96,45)  &rgb_ug RGB_COLOR_HSB(179,93,51)  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans
 &bl BL_ON   &rgb_ug RGB_HUI  &rgb_ug RGB_SAI                 &rgb_ug RGB_BRI                   &rgb_ug RGB_SPI                   &rgb_ug RGB_EFF                   &trans        &trans        &trans        &trans        &trans        &trans
 &bl BL_OFF  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD                 &rgb_ug RGB_BRD                   &rgb_ug RGB_SPD                   &rgb_ug RGB_EFR                   &trans        &trans        &trans        &trans        &trans        &trans
-                                                             &trans                            &trans                            &none                             &trans        &trans        &trans
+                                                             &trans                            &trans                            &trans                            &trans        &trans        &trans
             >;
         };
     };
