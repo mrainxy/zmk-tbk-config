@@ -20,9 +20,7 @@
 #define BT3 BT_SEL 3
 #define BT4 BT_SEL 4
 
-&mt {
-    retro-tap;
-};
+&mt { retro-tap; };
 
 &sk {
     //release-after-ms = <2000>;
@@ -65,6 +63,7 @@
             #binding-cells = <0>;
             bindings = <&macro_tap>, <&kp LS(COMMA) &kp EQUAL>;
         };
+
         cmd_mode: cmd_mode {
             label = "VIM_CMD_MODE";
             compatible = "zmk,behavior-macro";
@@ -84,10 +83,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESC    &kp Q  &kp W  &kp E      &kp R      &kp T         &kp Y  &kp U      &kp I      &kp O    &kp P     &kp BSPC
-&kp CAPS   &kp A  &kp S  &kp D      &kp F      &kp G         &kp H  &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LCTRL  &kp Z  &kp X  &kp C      &kp V      &kp B         &kp N  &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RWIN
-                         &kp LSHFT  &kp ENTER  &lt 2 DELETE  &to 1  &kp SPACE  &to 3
+&kp ESC    &kp Q  &kp W  &kp E      &kp R      &kp T         &kp Y         &kp U      &kp I         &kp O    &kp P     &kp BSPC
+&kp CAPS   &kp A  &kp S  &kp D      &kp F      &kp G         &kp H         &kp J      &kp K         &kp L    &kp SEMI  &kp SQT
+&kp LCTRL  &kp Z  &kp X  &kp C      &kp V      &kp B         &kp N         &kp M      &kp COMMA     &kp DOT  &kp FSLH  &kp RWIN
+                         &kp LSHFT  &kp ENTER  &kp NUMBER_3  &kp NUMBER_1  &kp SPACE  &kp NUMBER_2
             >;
         };
 
